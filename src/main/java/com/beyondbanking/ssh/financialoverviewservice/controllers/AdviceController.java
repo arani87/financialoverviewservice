@@ -23,4 +23,12 @@ public class AdviceController {
     public Object notAuthenticated(Exception e) {
         return new ErrorResponse("Customer record not found");
     }
+
+    @ExceptionHandler(Exception.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseBody
+    public Object notHandled(Exception e) {
+       // log the exception
+        return new ErrorResponse("Server is down!");
+    }
 }

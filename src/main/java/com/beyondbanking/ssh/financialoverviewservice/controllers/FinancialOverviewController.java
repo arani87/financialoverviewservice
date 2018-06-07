@@ -19,6 +19,7 @@ public class FinancialOverviewController {
      * @param bcnumber the search query provided as query param
      * @return financial overview
      */
+    @CrossOrigin
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
     public FinancialOverviewModel search(@RequestParam(value = "bcnumber") String bcnumber) throws FinancialOverviewAPIException {
