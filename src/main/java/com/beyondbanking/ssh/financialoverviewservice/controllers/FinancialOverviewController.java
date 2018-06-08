@@ -21,7 +21,6 @@ public class FinancialOverviewController {
      */
     @CrossOrigin
     @RequestMapping(method = RequestMethod.GET)
-    @ResponseBody
     public FinancialOverviewModel search(@RequestParam(value = "bcnumber") String bcnumber) throws FinancialOverviewAPIException {
 
         if ("12345".equalsIgnoreCase(bcnumber)) {
